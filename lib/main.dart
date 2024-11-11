@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lecture_13/lecture1.dart';
 import 'package:lecture_13/lecture2.dart';
+import 'package:lecture_13/lecture_15_animated_align.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,14 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,18 +39,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           children: [
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Lecture1(),
+                    builder: (context) => const Lecture15AnimatedAlign(),
                   ),
                 );
               },
-              child: const Text('Lecture #1'),
+              child: const Text('Lecture #15'),
             ),
             ElevatedButton(
               onPressed: () {
